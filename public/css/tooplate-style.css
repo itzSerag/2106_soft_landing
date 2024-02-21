@@ -270,24 +270,6 @@
     border-color: transparent;
   }
 
-
-/* Style the dropdown menu */
-.dropdown-menu {
-  background-color: #f8f8f8; /* Background color */
-  border: 1px solid #e3e3e3; /* Border */
-  border-radius: 0; /* Border radius */
-}
-
-.dropdown-menu > li > a {
-  color: #333; /* Text color */
-  padding: 10px 20px; /* Padding */
-  display: block; /* Display as block element */
-}
-
-.dropdown-menu > li > a:hover {
-  background-color: #e3e3e3; /* Hover background color */
-}
-
 /**/
 
 
@@ -710,6 +692,7 @@
 
     .custom-navbar .navbar-nav {
       margin-left: 3em;
+      overflow: hidden;
     }
 
     .home-info {
@@ -814,26 +797,3 @@
     }
   }
 
-
-  @media screen and (max-width: 480px) {
-
-    .online-form input[type="email"],
-    .online-form .form-control {
-      width: 85%;
-    }
-
-    .online-form .form-control {
-      display: block;
-      margin: 20px auto;
-    }
-
-    .online-form button {
-      position: relative;
-      right: 0;
-    }
-
-    .testimonial-image,
-    .testimonial-info {
-      height: 65vh;
-    }
-  }
