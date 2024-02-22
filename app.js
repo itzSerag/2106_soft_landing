@@ -6,8 +6,10 @@ const port = 3000;
 const bodyParser = require('body-parser');
 const {connectDB} = require('./config/dbConnection');
 
+// Utils
 const {welcomeEmail} = require('./utils/emailTransporter');
 
+// Models
 const Clinet = require('./models/clients');
 
 // static files
@@ -44,7 +46,6 @@ app.post('/', (req, res) => {
 
       client.save()
       .then(result => {
-        console.log(name ,email ,message);
         welcomeEmail(email, name);
         res.redirect('/');
       })

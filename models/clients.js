@@ -4,7 +4,6 @@ const mongoose = require('mongoose');
 const clientSchema = new mongoose.Schema({
   name: {
     type: String,
-    required: true,
     trim: true // trims whitespace from the beginning and end of the string
   },
   email: {
@@ -15,7 +14,8 @@ const clientSchema = new mongoose.Schema({
   },
   message: {
     type: String,
-    required: true
+    trim: true,
+    
 }
 }, {
   timestamps: true 

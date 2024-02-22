@@ -3,6 +3,9 @@ const nodemailer = require("nodemailer");
 // Configure nodemailer transporter
 const transporter = nodemailer.createTransport({
   service: "hotmail",
+  port: 587,
+  secure: false, // true for 465, false for other ports
+  
   auth: {
     user: process.env.HOTMAIL_EMAIL,
     pass: process.env.HOTMAIL_PASSWORD,
