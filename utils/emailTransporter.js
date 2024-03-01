@@ -5,7 +5,7 @@ const transporter = nodemailer.createTransport({
   service: "hotmail",
   port: 587,
   secure: false, // true for 465, false for other ports
-  
+
   auth: {
     user: process.env.HOTMAIL_EMAIL,
     pass: process.env.HOTMAIL_PASSWORD,
@@ -25,7 +25,7 @@ const welcomeEmail = async (toEmail, clientName) => {
       mailOptions = {
         from: process.env.HOTMAIL_EMAIL,
         to: toEmail,
-        subject: 'Welcome to Tek Vision',
+        subject: "Welcome to Tek Vision",
         html: `
           <html>
             <head>
@@ -47,7 +47,7 @@ const welcomeEmail = async (toEmail, clientName) => {
       mailOptions = {
         from: process.env.HOTMAIL_EMAIL,
         to: toEmail,
-        subject: 'Contact Us',
+        subject: "Contact Us",
         html: `
           <html>
             <head>
@@ -73,7 +73,6 @@ const welcomeEmail = async (toEmail, clientName) => {
         console.log("Email sent successfully:", info.response);
       }
     });
-
   } catch (error) {
     console.log("Error sending email:", error);
   }
